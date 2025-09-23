@@ -34,4 +34,11 @@ public class SegmentAgre {
     public void setAngle(double angle) {
         this.angle = angle;
     }
+
+    @Override
+    public String toString(){
+        return new String("SegmentAgre : centre = " + getCentre().toString()
+                                + " longueur = " + getLongueur()
+                                + " angle = " + getAngle());
+    }
 }
