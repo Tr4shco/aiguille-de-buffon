@@ -1,5 +1,7 @@
 package geometrie;
 
+import java.util.Random;
+
 public class Point {
     private double x;
     private double y;
@@ -23,6 +25,23 @@ public class Point {
 
     public void setY(double y) {
         this.y = y;
+    }
+
+    public void randomizePoint(double minX, double maxX, double minY, double maxY){
+        //Safety
+        if (minX > maxX){
+            double temp = minX;
+            minX = maxX;
+            maxX = temp;
+        }
+        if (minY > maxY){
+            double temp = minY;
+            minY = maxY;
+            maxY = temp;
+        }
+        Random r = new Random();
+        this.setX(r.nextDouble(minX, maxX));
+        this.setY(r.nextDouble(minY, maxY));
     }
 
     @Override

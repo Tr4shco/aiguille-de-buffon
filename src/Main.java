@@ -7,9 +7,10 @@ public class Main {
         Point p = new Point(12.0, 14.0);
         SegmentAgre sa = new SegmentAgre(p, 20.4, 30.2);
         SegmentComp sc = new SegmentComp(5, 5, 10, 45);
-
+        p.randomizePoint(2,3,1,2);
         System.out.println(p.toString());
-        System.out.println(sa.toString());
-        System.out.println(sc.toString());
+//        System.out.println(sa.toString());
+//        System.out.println(sc.toString());
+
     }
 }
